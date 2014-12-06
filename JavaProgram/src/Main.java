@@ -1,4 +1,6 @@
-
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
@@ -19,7 +21,60 @@ public class Main {
 		//list1_5();
 
 		//list1_6実行
-		list1_6();
+		//list1_6();
+
+		//text1_1
+		//test1_1();
+		//test1_2();
+
+		//String str = "A191";
+		//if(str.matches("A[0-9]{1,2}")){
+		//	System.out.println("パターンにマッチした。");
+		//}
+		//現在日時を取得する。
+		//Date now = new Date();
+		//System.out.println(now.getTime());
+		//interaterClass.sample();
+		//MaxListPerformance.test();
+
+		//DatabaseSet ds = new DatabaseSet();
+		//ds.dbConnect();
+		ArrayList<Item> items = ItemDAO.findByMinimumPrice(4);
+
+
+		System.out.printf("%-20s%-10s%-10s", "Name", "Price", "Weight" );
+		System.out.print("\n");
+		for(Item item : items){
+
+			System.out.printf("%-10s%10d%10d", item.getName(), item.getPrice(), item.getWeight());
+			System.out.println();
+		}
+
+	}
+	public static void test1_2(){
+		String folder = "c:\\javadev";
+		String file = "readme.txt";
+		System.out.println(folder);
+
+		//文字列の末尾が「\」で終わるかどうかの判定
+		if(!(folder.endsWith("\\"))){
+			System.out.println("\\で終わらない為、追加します。");
+			folder += "\\";
+		}
+		System.out.println(folder + file);
+	}
+	public static void test1_1(){
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < 100; i++){
+			sb.append((i+1) + ",");
+		}
+		System.out.println(sb.toString());
+
+		String s = sb.toString();
+		String[] str = s.split("[,]");
+		for(String data : str){
+			System.out.println(data);
+		}
 
 	}
 	/**
