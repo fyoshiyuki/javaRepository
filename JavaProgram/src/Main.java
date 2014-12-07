@@ -39,16 +39,20 @@ public class Main {
 
 		//DatabaseSet ds = new DatabaseSet();
 		//ds.dbConnect();
-		ArrayList<Item> items = ItemDAO.findByMinimumPrice(4);
+
+		//SwingTest st = new SwingTest();
+		//SwingTest824 st = new SwingTest824();
+		code832 st = new code832();
+		//ArrayList<Item> items = ItemDAO.findByMinimumPrice(4);
 
 
-		System.out.printf("%-20s%-10s%-10s", "Name", "Price", "Weight" );
-		System.out.print("\n");
-		for(Item item : items){
+		//System.out.printf("%-20s%-10s%-10s", "Name", "Price", "Weight" );
+		//System.out.print("\n");
+		//for(Item item : items){
 
-			System.out.printf("%-10s%10d%10d", item.getName(), item.getPrice(), item.getWeight());
-			System.out.println();
-		}
+		//	System.out.printf("%-10s%10d%10d", item.getName(), item.getPrice(), item.getWeight());
+		//	System.out.println();
+		//}
 
 	}
 	public static void test1_2(){
